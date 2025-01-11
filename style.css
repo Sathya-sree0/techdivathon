@@ -1276,8 +1276,8 @@ body{
 
 .container svg {
     display: block;
-    /* width: 196px; */
-    /* height: 300px; */
+    width: 100%; 
+    height: 100%;
     margin: 0 auto;
     margin-top: -164px;
 }
@@ -1302,6 +1302,9 @@ body{
 }
 #s-textF text{
     font: 59px 'Montserrat','Times New Roman', Times, serif;
+}
+#s-textS text{
+    font: 90px 'Montserrat','Times New Roman', Times, serif;
 }
 .text-copy {
     fill: none;
@@ -1691,7 +1694,127 @@ body{
   }
 }
 
+/* sponcers */
+.sponsorpage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	/* background: #161616; */
+	/* min-height: 100vh; */
+}
 
+
+.sponsor {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 40px 0;
+}
+
+.sponsor .cardsp {
+	position: relative;
+	width: 274px;
+    height: 186px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 48px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
+
+.sponsor .cardsp .content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+}
+
+.sponsor .cardsp:hover .content {
+	transform: translateY(-20px);
+}
+
+.sponsor .cardsp .content .imgBx {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	/* overflow: hidden; */
+}
+
+.sponsor .cardsp .content .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* object-fit: cover; */
+}
+
+.sponsor .cardsp .content .contentBx h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0 10px;
+	line-height: 1.1em;
+}
+
+.sponsor .cardsp .content .contentBx h3 span {
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: initial;
+}
+
+.container .cardsp .sci {
+	position: absolute;
+	bottom: 50px;
+	display: flex;
+}
+
+.sponsor .cardsp .sci li {
+	list-style: none;
+	margin: 0 10px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.sponsor .cardsp:hover .sci li {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.sponsor .cardsp .sci li a {
+	color: #fff;
+	font-size: 20px;
+}
+.sponsorline{
+    display:grid;
+    grid-auto-flow: column;
+}
+
+#sponsorvedio{
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 46%;  
+} 
+.imgs{
+    height:30px;
+}
 
 @media only screen and (max-width: 600px){
     .header{
@@ -2104,6 +2227,9 @@ body{
     #s-textI text{
     font: 86px 'Montserrat';
     }
+    #s-textS text{
+    font: 130px 'Montserrat';
+    }
     #s-textF text{
     font: 82px 'Montserrat';
     }
@@ -2181,6 +2307,9 @@ body{
     .experts-list {
     grid-auto-flow: row;
     gap: 23px;
+    }
+    .cardI__content{
+        height: 72%;
     }
     .cards {
     margin: 30px;
