@@ -305,16 +305,17 @@ body{
 #prizevideo {
     position: absolute;
     width: 100%;
-    height: 130%;
+    height: 150%;
     left: 0;
     object-fit: cover;
     z-index: -1;
     opacity: 46%;    
 } 
+
 #faqvideo {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 1089px;
     left: 0;
     object-fit: cover;
     z-index: -1;
@@ -732,7 +733,7 @@ body{
 .prizethree img,.prizetwo img,.prize1 img{
     justify-self: center;
 }
-/*timeline*/
+
 /* .timelinepage{
     /* height: 618px; */
     /* padding: 46px 62px; */
@@ -1591,15 +1592,15 @@ body{
     height:2193;
 }
 
-.cardI__content {
+#rajar {
   --flow-space: 0.9375rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-self: flex-end;
-  height: 22%;
-  width: 83%;
-  padding: 12% 1.25rem 1.875rem;
+  height: 27%;
+    width: 83%;
+    padding: 0% 1.25rem 1.875rem;
   background: linear-gradient(
     180deg,
     hsla(0, 0%, 0%, 0) 0%,
@@ -1607,9 +1608,28 @@ body{
     hsl(0, 0%, 0%) 100%
   );
 }
+.cardI__content {
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    height: 52%;
+    width: 83%;
+    padding: 0% 1.25rem 1.475rem;
+     background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
 #raja{
    height: 7%; 
 }
+
+
 .cardI__content--container {
   --flow-space: 1.25rem;
 }
@@ -1629,6 +1649,30 @@ body{
   left: -1.25rem;
   background-color: var(--brand-color);
 }
+/* @-webkit-keyframes rightThenLeft {
+    0%   {left: 0%;}
+    50%  {left: 100%;}
+    100% {left: 0%;}
+}
+.marquee {
+    position: absolute;
+    white-space: nowrap;
+    -webkit-animation: rightThenLeft 4s linear;
+} */
+ #pot img{
+    padding-right: 25px;
+ }
+.p{
+    margin: 0px;
+}
+#sashank{
+ height:75%; 
+ padding-bottom:30px;
+}
+#athira{
+    height: 60%;
+}
+
 @media (any-hover: hover) and (any-pointer: fine) {
   .cardI__content {
     transform: translateY(62%);
@@ -1648,7 +1692,7 @@ body{
     transition: transform 500ms ease-in;
   }
 
-  .cardI__content--container > :not(.cardI__title),
+  .cardI_content--container > :not(.cardI_title),
   .cardI__button {
     opacity: 0;
     transition: transform 500ms ease-out, opacity 500ms ease-out;
@@ -1675,9 +1719,9 @@ body{
     transform: scale(1.3);
   }
 
-  .cardI:hover .cardI__content--container > :not(.cardI__title),
+  .cardI:hover .cardI_content--container > :not(.cardI_title),
   .cardI:hover .cardI__button,
-  .cardI:focus-within .cardI__content--container > :not(.cardI__title),
+  .cardI:focus-within .cardI_content--container > :not(.cardI_title),
   .cardI:focus-within .cardI__button {
     opacity: 1;
     transition: opacity 500ms ease-in;
@@ -1744,12 +1788,20 @@ body{
 
 .sponsor .cardsp .content .imgBx {
 	position: relative;
-	width: 150px;
-	height: 150px;
+	/* width: 150px;
+	height: 150px; */
 	/* overflow: hidden; */
 }
+.imgBx img{
+    height:78px; 
+    width:252px;
+}
 
-.sponsor .cardsp .content .imgBx img {
+#cyber{
+    height: 127px;
+    width: 166px;
+}
+.sponsor .cardsp .content  {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1813,9 +1865,51 @@ body{
     opacity: 46%;  
 } 
 .imgs{
-    height:30px;
+  height:30px;
 }
 
+.moveing {
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars during animation */
+  }
+  .imgmoveing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  .moving-image {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for centering */
+    animation: moveRight 5s linear infinite;
+  }
+  @keyframes moveRight {
+    0% {
+      left: -100px; /* Start off-screen */
+    }
+    100% {
+      left: 100vw; /* Move beyond the screen */
+    }
+  }
+  #pot {
+    
+    position: relative;
+    animation: linear infinite;
+    animation-name: run;
+    animation-duration: 7s;
+  }
+  @keyframes run {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: 37%;
+    }
+    100% {
+      left: 0;    
+    }
+  }
 @media only screen and (max-width: 600px){
     .header{
         height: 60px;
@@ -2308,26 +2402,44 @@ body{
     grid-auto-flow: row;
     gap: 23px;
     }
+    
     .cardI__content{
-        height: 72%;
+        height: 31%;
     }
-    .cards {
-    margin: 30px;
+    .cards{
+        margin: 30px;
     }
+
+    /* sponsors */
+    #sashank{
+ height:46%; 
+ padding-bottom:unset;
+}
+    .imgBx img {
+    height: 29px;
+    width: 76px;
+    }
+.sponsor .cardsp {
+    width: 91px;
+    height: 85px;
+    margin: 7px;
+    
+}
+#cyber {
+    height: 56px;
+    width: 64px;
 }
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
+    #pot img{
+    width: 97px;
+    height: 41px;
+    padding-bottom: 13px;
+}
+#athira{
+    height: unset;
+}
+#eswari{
+    height: 43%;
+}
+}
 
