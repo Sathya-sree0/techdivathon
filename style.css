@@ -287,7 +287,7 @@ body{
 #domainvideo {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 187%;
     left: 0;
     object-fit: cover;
     z-index: -1;
@@ -528,6 +528,7 @@ body{
      /* height: 100vh; */
     padding: 0px 10px;
     height: 690px;
+    padding-bottom: 192px;
     
 }
 .domain1{
@@ -550,7 +551,7 @@ body{
     margin: 18px;   
 }
 
-.thecard{
+/* .thecard{
     position: relative;
     top: 0;
     left: 0;
@@ -558,17 +559,68 @@ body{
     height: 346px;
     border-radius: 10px;
     transform-style: preserve-3d;
-    transition: all 0.8s ease;
+    transition: all 0.8s ease; */
     /* box-shadow: rgb(255 0 0) 0px 4px 20px 0px; */
+/* } */
+.thecard{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 227px;
+    height: 346px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: 0.8s;
+}
+.thecard {
+    position: relative;
+    >.thefront,
+    >.theback {
+        display: block;
+        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+        transition-duration: .3s;
+        transition-property: transform, opacity;
+    }
+    >.thefront {
+        transform: rotateY(0deg);
+    }
+    >.theback {
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(-180deg);
+    }
+    &:hover {
+        >.thefront {
+            transform: rotateY(180deg);
+        }
+        >.theback {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+    &.flip-vertical {
+        >.theback {
+            transform: rotateX(-180deg);
+        }
+        &:hover {
+            >.thefront {
+                transform: rotateX(180deg);
+            }
+            >.theback {
+                transform: rotateX(0deg);
+            }
+        }
+    }
 }
 
+  /* .thecard:hover{
+    transform: rotateY(180deg);
+  } */
 
-
-  
-  
-  .thecard:hover{
-    transform: rotateY(-180deg);
-  }
   
 
    .thefront{
@@ -1537,6 +1589,7 @@ body{
     grid-auto-flow: row;
     gap: 74px;
     margin: 54px;
+    margin-bottom: 196px;
 }
 .experts-list{
     display: grid;
@@ -1910,6 +1963,35 @@ body{
       left: 0;    
     }
   }
+.image-container {
+    
+    overflow: hidden;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-track {
+    /* position: relative; */
+    animation: scroll 7s linear infinite;
+}
+
+.image-track img {
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+    /* object-fit: cover; */
+}
+
+/* Keyframe Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15%);
+    }
+    
+}
 @media only screen and (max-width: 600px){
     .header{
         height: 60px;
@@ -2430,7 +2512,7 @@ body{
     width: 64px;
 }
 
-    #pot img{
+#pot img{
     width: 97px;
     height: 41px;
     padding-bottom: 13px;
@@ -2440,6 +2522,11 @@ body{
 }
 #eswari{
     height: 43%;
+}
+.image-track img {
+    width: 43px;
+    height: 54px;
+    margin-right: 6px;
 }
 }
 
