@@ -302,6 +302,15 @@ body{
     z-index: -1;
     opacity: 46%;    
 } 
+#expertvedio {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 46%;    
+} 
 #prizevideo {
     position: absolute;
     width: 100%;
@@ -315,7 +324,7 @@ body{
 #faqvideo {
     position: absolute;
     width: 100%;
-    height: 1089px;
+    height: 1012px;
     left: 0;
     object-fit: cover;
     z-index: -1;
@@ -2524,9 +2533,9 @@ body{
     height: 43%;
 }
 .image-track img {
-    width: 43px;
+    width: 36px;
     height: 54px;
-    margin-right: 6px;
+    margin-right: 0px;
 }
 }
 
