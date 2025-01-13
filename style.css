@@ -306,7 +306,7 @@ body{
 #expertvedio {
     position: absolute;
     width: 100%;
-    height: 120%;
+    height: 185%;
     left: 0;
     object-fit: cover;
     z-index: -1;
