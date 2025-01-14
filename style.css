@@ -1369,6 +1369,9 @@ body{
 #s-textS text{
     font: 90px 'Montserrat','Times New Roman', Times, serif;
 }
+#s-textC text{
+    font: 50px 'Montserrat','Times New Roman', Times, serif;
+}
 .text-copy {
     fill: none;
     stroke: white;
@@ -2093,6 +2096,7 @@ body{
 
     .domainpage{
         height: unset;
+        padding-bottom: 20px;
     }
     .domains {
         overflow-x: scroll;
@@ -2493,6 +2497,9 @@ body{
     .experts-list {
         grid-auto-flow: row;
         gap: 23px;
+    }
+    experts{
+        margin-bottom: unset;
     }
     
     .cardI__content{
