@@ -87,4 +87,46 @@ $.fn.commentCards = function () {
 };
 
 $(".cards").commentCards();
+//popupvedio
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("videoPopup");
+  const closePopup = document.getElementById("closePopup");
+  const video = document.getElementById("popupVideo");
+  const toggleMuteButton = document.getElementById("toggleMute");
+
+  // Show the popup when the page loads
+  popup.style.display = "flex";
+
+  // Close the popup when the close button is clicked
+  closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+
+    // Automatically unmute the video when closing the popu
+      video.muted = true;
+    toggleMuteButton.textContent = "🔊"; // Update the button symbol to show unmuted state
+  });
+
+  // Close the popup if the user clicks outside the popup content
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+
+      // Automatically unmute the video when closing the popup
+
+        video.muted = true;
+      toggleMuteButton.textContent = "🔊"; // Update the button symbol to show unmuted state
+    }
+  });
+
+  // Toggle mute/unmute when the button is clicked
+  toggleMuteButton.addEventListener("click", () => {
+    if (video.muted) {
+      video.muted = false;
+      toggleMuteButton.textContent = "🔊"; // Unmute symbol
+    } else {
+      video.muted = true;
+      toggleMuteButton.textContent = "🔇"; // Mute symbol
+    }
+  });
+});
 
