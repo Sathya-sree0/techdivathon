@@ -1799,7 +1799,7 @@ body{
     height: 60%;
 }
 .alert{
-    color: #f00d2d;
+    color: #ff0024;
     font-size: 23px;
     padding-top: 21px;
 }
@@ -1932,10 +1932,10 @@ body{
 }
 
 .sponsor .cardsp{
-    border-color: rgb(180, 157, 25); /* Add gold border on hover */
-    box-shadow: 0 0 5px rgb(179, 158, 40), 0 0 5px rgb(202, 179, 47), 0 0 20px rgb(158, 139, 31); /* Glowing effect */
+    
+    border-color: rgb(218, 165, 32);
+    box-shadow: rgb(218, 165, 32) 0px 0px 5px, rgb(218, 165, 32) 0px 0px 5px, rgb(218, 165, 32) 0px 0px 20px;
 }
-
 .sponsor .cardsp .content {
     position: relative;
     display: flex;
