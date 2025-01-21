@@ -1798,7 +1798,11 @@ body{
 #athira{
     height: 60%;
 }
-
+.alert{
+    color: #f00d2d;
+    font-size: 23px;
+    padding-top: 21px;
+}
 @media (any-hover: hover) and (any-pointer: fine) {
   .cardI__content {
     transform: translateY(62%);
@@ -2652,6 +2656,9 @@ body{
     font-size: 18px;
     
     /* border-radius: 50%; */
+}
+.alert{
+    font-size: 14px;
 }
 }
 
