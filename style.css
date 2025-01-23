@@ -1510,10 +1510,10 @@ body{
     margin-top: -14px;
 }
 .contact p{
-    color:#8a6806;
+    color:#eab009;
 }
 .contact{
-    padding-left: 180px;
+    /* padding-left: 180px; */
     padding-top: 47px;
 }
 .contact h2{
@@ -2034,6 +2034,8 @@ body{
     font-size: 23px;
     padding-top: 21px;
 }
+
+
 @media (any-hover: hover) and (any-pointer: fine) {
   .cardI__content {
     transform: translateY(62%);
@@ -2331,6 +2333,26 @@ body{
         transform: translateX(15%);
     }
     
+}
+/* footer links */
+.flink{
+    padding-top: 47px;
+}
+.flink a{
+    text-decoration: none;
+    color: #eab009;
+}
+.flink img{
+    width: 20px;
+}
+.flink h2{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.flink li{
+    font-size: 22px;
+    color: #eab009;
+    list-style: none;
 }
 @media only screen and (max-width: 600px){
     .header{
@@ -2658,7 +2680,7 @@ body{
         margin-top: 0px;
     }
     .footerpage {
-        padding: 10px 20px;
+        padding: 10px 9px;
     }
     .contact {
         padding-left: 0px;
@@ -2952,6 +2974,26 @@ body{
     width: 100%;
     height: 100%;
            
+}
+/* footer link */
+.flink li {
+    list-style: none;
+}
+.flink {
+    padding-top: 0px;
+    margin: 7px 10px 0px;
+}
+.flink a{
+    font-size: 8px;
+}
+.flink img {
+    width: 8px;
+}
+.flink h2{
+    padding-bottom: 0px;
+}
+.contact h2{
+    margin-left:51px;
 }
 
 }
