@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const faqItems = document.querySelectorAll(".faq-item");
   
@@ -129,4 +132,99 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+//cube 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cube = document.getElementById('cube');
+  const modal = document.getElementById('modal');
+  const closeBtn = document.getElementById('closeModal');
+  const content = document.querySelector('.content');
+  const track = document.getElementById('galleryTrack');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dotsContainer = document.getElementById('galleryDots');
+
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.gallery-slide');
+  const totalSlides = slides.length;
+
+  // Create dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  // Update dots
+  function updateDots() {
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+  }
+
+  // Slide navigation
+  function goToSlide(index) {
+    currentSlide = index;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    updateDots();
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    goToSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    goToSlide(currentSlide);
+  }
+
+  // Event listeners
+  cube.addEventListener('click', () => {
+    modal.classList.add('active');
+    content.classList.add('blur');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+    content.classList.remove('blur');
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+      content.classList.remove('blur');
+    }
+  });
+
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('active')) return;
+    
+    if (e.key === 'ArrowLeft') prevSlide();
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'Escape') {
+      modal.classList.remove('active');
+      content.classList.remove('blur');
+    }
+  });
+
+  // Stop cube rotation on hover
+  cube.addEventListener('mouseenter', () => {
+    cube.querySelector('.cube').style.animationPlayState = 'paused';
+  });
+
+  cube.addEventListener('mouseleave', () => {
+    cube.querySelector('.cube').style.animationPlayState = 'running';
+  });
+});
+
+
 
