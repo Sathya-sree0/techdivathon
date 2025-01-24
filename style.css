@@ -2037,8 +2037,116 @@ body{
     font-size: 23px;
     padding-top: 21px;
 }
+.carousel {
+    /* ... */
+    > * {
+      flex: 0 0 100%;
+    }
+  }
 
+  /* Group the cards for better structure. */
+  .group {
+    display: flex;
+    gap: 20px;
+    /* Add padding to the right to create a gap between the last and first card. */
+    padding-right: 20px;
+    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    animation: scrolling 26s linear infinite;
+  }
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .carousel {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1281px;
+    overflow: hidden;
+    display: flex;
+    
+  }
 
+    
+    .carousel:hover .group {
+      animation-play-state: paused;
+    }
+  
+  .logocard {
+    
+    color: white;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+    padding: 20px;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    width: 256px;
+    height: 119px;
+
+    &:nth-child(1) {
+      background: #fff;
+    }
+
+    &:nth-child(2) {
+      background: #fff;
+    }
+
+    &:nth-child(3) {
+      background: #fff;
+    }
+    &:nth-child(4) {
+        background: #fff;
+      }
+      &:nth-child(5) {
+        background: #fff;
+      }
+      &:nth-child(6) {
+        background: #fff;
+      }
+      &:nth-child(7) {
+        background: #fff;
+      }
+      &:nth-child(8) {
+        background: #fff;
+      }
+      &:nth-child(9) {
+        background: #fff;
+      }
+      &:nth-child(10) {
+        background: #fff;
+      }
+
+      &:nth-child(11) {
+        background: #fff;
+      }
+      &:nth-child(12) {
+        background: #fff;
+      }
+      &:nth-child(13) {
+        background: #fff;
+      }
+      &:nth-child(14) {
+        background: #fff;
+      }
+      &:nth-child(15) {
+        background: #fff;
+      }
+      &:nth-child(16) {
+        background: #fff;
+      }
+      &:nth-child(17) {
+        background: #fff;
+      }
+
+  }
+.logocard img {
+    width: 256px;
+    height: 117px;
+}
 @media (any-hover: hover) and (any-pointer: fine) {
   .cardI__content {
     transform: translateY(62%);
@@ -2191,14 +2299,18 @@ body{
 	/* overflow: hidden; */
 }
 .imgBx img{
-    height:78px; 
-    width:252px;
+    height: 130px;
+    width: 252px;
+}
+.imgBx a{
+    text-decoration: none;
+    cursor: pointer;
 }
 
-#cyber{
+/* #cyber{
     height: 127px;
     width: 166px;
-}
+} */
 .sponsor .cardsp .content  {
 	position: absolute;
 	top: 0;
@@ -2308,35 +2420,7 @@ body{
       left: 0;    
     }
   }
-.image-container {
-    
-    overflow: hidden;
 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.image-track {
-    /* position: relative; */
-    animation: scroll 7s linear infinite;
-}
-
-.image-track img {
-    width: 150px;
-    height: 100px;
-    margin-right: 20px;
-    /* object-fit: cover; */
-}
-
-/* Keyframe Animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(15%);
-    }
-    
-}
 /* footer links */
 .flink{
     padding-top: 47px;
@@ -2358,9 +2442,10 @@ body{
     list-style: none;
 }
 #community1img{
-    width:248px;
-    height: 78px;
+        width: 248px;
+    height: 165px;
 }
+
 @media only screen and (max-width: 600px){
     .header{
         height: 60px;
@@ -2871,8 +2956,8 @@ body{
  padding-bottom:unset;
 }
     .imgBx img {
-    height: 29px;
-    width: 76px;
+        height: 66px;
+        width: 76px;
     }
 .sponsor .cardsp {
     width: 91px;
@@ -3001,6 +3086,23 @@ body{
 }
 .contact h2{
     margin-left:51px;
+}
+#community1img {
+    width: 77px;
+    height: 67px;
+}
+.logocard{
+    padding: 15px;
+    width: 87px;
+    height: 36px;
+    border-radius: 17px;
+}
+.logocard img {
+    width: 91px;
+    height: 36px;
+}
+.group{
+    gap: 12px;
 }
 
 }
