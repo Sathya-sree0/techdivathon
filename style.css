@@ -269,7 +269,7 @@ body{
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding:9px 24px;
+  padding:13px 24px;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;
@@ -972,7 +972,7 @@ body{
     align-items: center; */
     display: flex;
         opacity: 1;
-        justify-content: space-between;
+        justify-content:center;
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
@@ -1675,6 +1675,9 @@ body{
     font: 60px 'Montserrat','Times New Roman', Times, serif;
 }
 #s-textH text{
+    font: 60px 'Montserrat','Times New Roman', Times, serif;
+}
+#s-textK text{
     font: 60px 'Montserrat','Times New Roman', Times, serif;
 }
 .text-copy {
@@ -2812,12 +2815,13 @@ body{
         position: absolute;
         top: 61px;
         right: 0;
-        height: 300px;
+        height: 337px;
         background-color: #eab725;
         
     }
     .menulist.active {
         display: flex;
+
     }
     .menulist li {
         text-align: center;
@@ -2976,6 +2980,15 @@ body{
     margin: 7px;
     
 }
+.sponsorpage h1{
+    color: #daa520;
+    font-size: 39px;
+    align-content: center;
+    /* padding-right: 251px; */
+    font-family: Zaptron;
+}
+
+
 #cyber {
     height: 56px;
     width: 64px;
