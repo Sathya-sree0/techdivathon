@@ -1714,6 +1714,7 @@ body{
   animation-delay: -5s;
 }
 
+
 @keyframes stroke-offset{
   100% {stroke-dashoffset: -35%;}
 }
@@ -2149,12 +2150,18 @@ body{
       &:nth-child(15) {
         background: #fff;
       }
-      &:nth-child(16) {
+     &:nth-child(16) {
         background: #fff;
       }
+        /*
       &:nth-child(17) {
         background: #fff;
+
       }
+      &:nth-child(18) {
+        background: #fff;
+        
+      } */
 
   }
 .logocard img {
