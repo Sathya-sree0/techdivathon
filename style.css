@@ -25,6 +25,14 @@ body{
   #popupVideo{
      width: 559px;
   }
+  .sponsorheading{
+    color: #daa520;
+    font-size: 39px;
+    align-content: center;
+    /* padding-right: 251px; */
+    padding-left: 36%;
+    font-family: Zaptron;
+  }
   
   /* Popup content */
   .popup-content {
@@ -370,7 +378,7 @@ body{
     left: 0;
     object-fit: cover;
     z-index: -1;
-    opacity: 46%;    
+    opacity: 30%;    
 } 
 #prizevideo {
     position: absolute;
@@ -3137,6 +3145,11 @@ body{
 }
 .group{
     gap: 12px;
+}
+.sponsorheading{
+    padding-left: 22%;
+    font-size: 19px;
+
 }
 
 }
