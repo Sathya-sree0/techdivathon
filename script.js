@@ -25,42 +25,54 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-
-var countDownDate = new Date("Feb 3,2025 00:00:00:00").getTime();
-var x=setInterval(function(){
-  var now = new Date().getTime();
-  var distance = countDownDate-now;
-
-  var days= Math.floor(distance / (1000 * 60 * 60 * 24 ));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  var countDownDate = new Date("Feb 3, 2025 00:00:00").getTime();
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
   
-  document.getElementById("days").innerHTML=days;
-  document.getElementById("hours").innerHTML=hours;
-  document.getElementById("minutes").innerHTML=minutes;
-  document.getElementById("seconds").innerHTML=seconds;
-},1000);
-let scrollContainer=document.querySelector(".domains");
-        let backbtn=document.getElementById("backbtn");
-        let nextbtn=document.getElementById("nextbtn");
-        scrollContainer.addEventListener("wheel",(evt)=>{
-            evt.preventDefault();
-            scrollContainer.scrollLeft+=evt.deltaY;
-        });
-        nextbtn.addEventListener("click",()=>{
-            scrollContainer.style.scrollBehavior="smooth";
-            scrollContainer.scrollLeft+=250;
-        });
-        backbtn.addEventListener("click",()=>{
-            scrollContainer.style.scrollBehavior="smooth";
-            scrollContainer.scrollLeft-=250;
-        });
-
-
-function toggleMenu() {
-  document.getElementById("myTopnav").classList.toggle("active");
-}
+    if (distance <= 0) {
+      clearInterval(x); // Stop the countdown when time is up
+      document.getElementById("days").innerHTML = "00";
+      document.getElementById("hours").innerHTML = "00";
+      document.getElementById("minutes").innerHTML = "00";
+      document.getElementById("seconds").innerHTML = "00";
+      return;
+    }
+  
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+  }, 1000);
+  
+  let scrollContainer = document.querySelector(".domains");
+  let backbtn = document.getElementById("backbtn");
+  let nextbtn = document.getElementById("nextbtn");
+  
+  scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+  });
+  
+  nextbtn.addEventListener("click", () => {
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft += 250;
+  });
+  
+  backbtn.addEventListener("click", () => {
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft -= 250;
+  });
+  
+  function toggleMenu() {
+    document.getElementById("myTopnav").classList.toggle("active");
+  }
+  
 // guidlines
 $.fn.commentCards = function () {
   return this.each(function () {
