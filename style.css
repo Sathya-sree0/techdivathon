@@ -2213,10 +2213,12 @@ body{
 	display: grid;
 	gap: 0.5rem;
 	grid-template-columns: repeat(6, var(--img-size));
-	grid-template-rows: repeat(4, var(--img-size));
-	 margin:0px 0px 180px 500px;  /* center page */
+	grid-template-rows: repeat(4, var(--img-size));  
 	transform: scale(1);
-	transform-origin: top center;
+	width: fit-content;      /* shrink wrapper to gallery size */
+	margin: 0 auto;          /* center horizontally */
+	transform-origin: top center; 
+
 }
 
 
