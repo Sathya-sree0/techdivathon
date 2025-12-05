@@ -3261,7 +3261,7 @@ body{
 	}
 }
 
-/* Mobile 768px and below → scale more */
+
 @media (max-width: 768px) {
 	.gallery_wrapper {
 		transform: scale(0.65);
@@ -3269,7 +3269,7 @@ body{
 	}
 }
 
-/* Small Mobile 480px and below */
+
 @media (max-width: 480px) {
 	.gallery_wrapper {
 		transform: scale(0.5);
