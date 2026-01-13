@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-  var countDownDate = new Date("Feb 3, 2025 00:00:00").getTime();
+  var countDownDate = new Date("Feb 20, 2026 00:00:00").getTime();
   var x = setInterval(function () {
     var now = new Date().getTime();
     var distance = countDownDate - now;
