@@ -307,43 +307,62 @@
 
 
 .regbtn {
-  background-color: #923251;
-  border-radius: 100px;
-  box-shadow:
-    rgba(214, 134, 159, 0.25) 0 -25px 18px -14px inset,
-    rgba(204, 75, 116, 0.18) 0 1px 2px,
-    rgba(204, 75, 116, 0.18) 0 2px 4px,
-    rgba(131, 20, 75, 0.18) 0 4px 8px,
-    rgba(131, 20, 75, 0.18) 0 8px 16px,
-    rgba(204, 75, 116, 0.18) 0 16px 32px;
-
-  color: #83144B;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #a90b4d;
+  text-shadow: 0 1px #fff;
   padding:13px 24px;
   text-align: center;
+
+
+  cursor: pointer;
+  display: inline-block;
+ 
   text-decoration: none;
   transition: all 250ms;
-  border: 0;
+  
   font-size: 17px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   margin-top: 31px;
-  /* margin-right: 367px; */
+ 
+}
+/* 
+.regbtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+  padding:13px 24px;
+  text-align: center;
+  
+} */
+.regbtn:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
 }
 
-.regbtn:hover {
-  box-shadow:
-    rgba(214, 134, 159, 0.40) 0 -25px 18px -14px inset,
-    rgba(204, 75, 116, 0.28) 0 1px 2px,
-    rgba(204, 75, 116, 0.28) 0 2px 4px,
-    rgba(131, 20, 75, 0.28) 0 4px 8px,
-    rgba(131, 20, 75, 0.28) 0 8px 16px,
-    rgba(204, 75, 116, 0.28) 0 16px 32px;
+.regbtn:active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
 
-  transform: scale(1.05) rotate(-1deg);
+.regbtn :focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
 
 
@@ -1418,7 +1437,7 @@
 
 .regbtn a{
     text-decoration: none;
-    color: #cfb8b8;
+    color: #C2185B;
     font-size: 21px;
 }
 
@@ -2785,6 +2804,12 @@
         width: 216px;
         height: 297px;
     }
+    .regbtn {
+    width: 90%;
+    font-size: 15px;
+    padding: 12px 18px;
+    margin-top: 20px;
+    }
     .domains img {
         width: 180px;
         height: 176px;
@@ -3036,7 +3061,7 @@
         top: 61px;
         right: 0;
         height: 337px;
-        background-color: #CC4B74;
+        background-color: #f5cfdb;
         
     }
     .menulist.active {
@@ -3386,6 +3411,11 @@
         max-width: 14em;
         margin: 66px 0px 0px 35px;
     }
+    .regbtn {
+    width: 220px;
+    font-size: 16px;
+    padding: 13px 22px;
+  }
 }
 
 /* Small Mobile */
